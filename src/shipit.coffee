@@ -11,7 +11,7 @@
 #   HUBOT_SHIP_EXTRA_SQUIRRELS
 #
 # Commands:
-#   ship it - Display a motivation squirrel
+#   hubot ship it - Display a motivation squirrel
 #
 # Author:
 #   maddox
@@ -41,5 +41,5 @@ module.exports = (robot) ->
   else
     regex = /\bship\s*it\b/i
 
-  robot.hear regex, (msg) ->
+  robot.respond regex, (msg) ->
     msg.send msg.random squirrels
